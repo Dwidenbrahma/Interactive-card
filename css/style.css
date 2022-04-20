@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font400: 'Outfit', sans-serif;
+  --font700: 'Overpass', sans-serif;
+}
+
+html {
+  font-size: 60%;
+
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-family: var(--font700);
+}
+
+p {
+  color: hsl(217, 12%, 63%);
+  font-family: var(--font400);
+}
+
+/* rating container */
+#rating-container {
+  background-color:  hsl(213, 19%, 18%);
+  width: 28vw;
+  height: 63vh;
+  border-radius: 5%;
+  position: absolute;
+  left: 35vw;
+  top: 25vh;
+
+}
+#rating-container h1 {
+  padding-top: 2.5rem;
+  padding-left: 3.5rem;
+  font-size: 3.125rem;
+}
+
+#rating-container p {
+  font-size: 1.5rem;
+  margin-left: 3.5rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  padding-right: 4.5rem;
+}
+
+.circle-container {
+  margin-top: 3.5rem;
+  margin-left: 3.5rem;
+  background-color: hsl(208, 29%, 20%);
+  width: 3vw;
+  height: 6.4vh;
+  border-radius: 50%;
+
+}
+
+.circle-container img {
+  width: 40%;
+  margin-left: 1.3rem;
+  margin-top: 1rem;
+}
+
+.rating-btn button {
+  cursor: pointer;
+  border: none;
+  width: 3.3vw;
+  height: 7vh;
+  border-radius: 50%;
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: hsl(208, 29%, 20%);
+  color: hsl(217, 12%, 63%);
+
+}
+
+.submit-btn {
+  cursor: pointer;
+  margin-left: 3rem;
+  margin-top: 3.6rem;
+  width: 24vw;
+  height: 7vh;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* feedback container */
+#feedback-container {
+  display: none;
+}
+
+.feedback {
+  background-color: hsl(213, 19%, 18%);
+  width: 28vw;
+  height: 60vh;
+  border-radius: 5%;
+  position: absolute;
+  left: 35vw;
+  top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feedback img {
+  width: 40%;
+  position:relative;
+  left: 11rem;
+  top: 3.5rem;
+  margin-bottom: 2rem;
+}
+.rating-got{
+  width: 13vw;
+  height: 5vh;
+  background-color: hsl(208, 29%, 20%);
+  border-radius: 20px;
+  position: relative;
+  left: 10rem;
+  top: 4rem;
+  margin-bottom: 3rem;
+}
+.r{
+  font-size: 1.5rem;
+  color: hsl(25, 97%, 53%);
+  font-family: var(--font700);
+  padding-top: 0.7rem;
+  padding-left: 1.46rem;
+}
+.feedback h1{
+  font-size: 3.125rem;
+  position: relative;
+  left: 12rem;
+  top: 3.5rem;
+  padding-bottom: 1rem;
+
+}
+.feedback .p{
+  font-size: 1.5rem;
+  padding: 3rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.submit-btn:hover{
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+
+}
+.rating-btn button:hover{
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* media query */
+/* tab  landscape*/
+@media (max-width:1024px){
+ 
+  #rating-container{
+    width: 40vw;
+    position: absolute;
+    left: 30%;
+   
+  }
+  .circle-container {
+    margin-top: 3.5rem;
+    margin-left: 4rem;
+    background-color: hsl(208, 29%, 20%);
+    width: 4.3vw;
+    height: 6.2vh;
+    border-radius: 50%;
+  
+  }
+  #rating-container h1 {
+      padding-top: 2rem;
+      padding-left: 4.2rem;
+      font-size: 3rem;
+    }
+  #rating-container p{
+      margin-left: 4rem;
+      font-size: 1.4rem;
+  }
+  .rating-btn button{
+      width: 3.7vw;
+      height: 6vh;
+      margin-left: 3.2rem;
+  }
+  .submit-btn{
+      margin-left: 4rem;
+      margin-top: 3.6rem;
+      width: 31vw;
+      height: 6vh;
+  }
+  .feedback{
+    width: 40vw;
+    position: absolute;
+    left: 30%;
+  }
+  .r{
+      font-weight: bold;
+  }
+  .rating-got{
+      width: 18.5vw;
+  }
+  .feedback h1{
+      font-size: 3rem;
+  }
+  .rating-got p{
+      font-size: 1.4rem;
+  }
+}
+/* tab */
+@media (max-width:767px){
+  #rating-container{
+    width: 53vw;
+    position: absolute;
+    left: 22%;
+   
+  }
+  .circle-container {
+    margin-top: 3.5rem;
+    margin-left: 5rem;
+    background-color: hsl(208, 29%, 20%);
+    width: 5.2vw;
+    height: 6vh;
+    border-radius: 50%;
+  
+  }
+  #rating-container h1 {
+    padding-top: 2.2rem;
+    padding-left: 4.2rem;
+    font-size: 3.2rem;
+  }
+  #rating-container p{
+    margin-left: 4.4rem;
+    font-size: 1.6rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .rating-btn button{
+    width: 5vw;
+    height: 6vh;
+    margin-left: 3.5rem;
+    margin-top: 2rem;
+}
+.submit-btn{
+  margin-left: 3.2rem;
+  margin-top: 3rem;
+  width: 44vw;
+  height: 6vh;
+ 
+}
+.feedback{
+width: 53vw;
+position: absolute;
+left: 22%;
+}
+.rating-got{
+width: 22.5vw;
+margin-left: 2rem;
+}
+.feedback h1{
+font-size: 3rem;
+margin-left: 1rem;
+}
+.feedback img{
+margin-left: 1rem;
+}
+.feedback .p{
+padding-left: 5rem;
+padding-right: 5rem;
+}
+
+}
+/* mobile */
+@media(max-width:500px){
+ 
+  #rating-container{
+    width: 73vw;
+    position: absolute;
+    left: 13%;
+   
+  }
+  .circle-container {
+    margin-top: 3.5rem;
+    margin-left: 4rem;
+    background-color: hsl(208, 29%, 20%);
+    width: 8vw;
+    height: 6.98vh;
+    border-radius: 50%;
+
+  }
+  .circle-container img{
+    margin-top: 1.2rem;
+
+  }
+  #rating-container h1 {
+    padding-top: 2.2rem;
+    padding-left: 4.2rem;
+    font-size: 2.9rem;
+  }
+  #rating-container p{
+    margin-left: 4rem;
+    font-size: calc(1rem + 4px);
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .rating-btn button{
+    width: 6vw;
+    height: 5.5vh;
+    margin-left: 3.5rem;
+    margin-top: 3rem;
+}
+.submit-btn{
+  margin-left: 3.2rem;
+  margin-top: 3rem;
+  width: 62vw;
+  height: 6vh;   
+}
+.feedback{
+width: 73vw;
+position: absolute;
+left: 13%;
+}
+.feedback img{
+margin-left: 0;
+}
+.rating-got{
+width: 35vw;
+margin-left: 0;
+}
+.feedback h1{
+font-size: 2.5rem;
+margin-left: 0;
+}
+.feedback img{
+margin-left: 1rem;
+}
+.feedback .p{
+font-size: 1.4rem;
+
+}
+}
